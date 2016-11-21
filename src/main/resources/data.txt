@@ -1,0 +1,63 @@
+
+@sky202123-
+
+1. Sign up for Amazon AWS free tier, Launch an EC2 Linux instance.
+
+aws : https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#Instances:sort=dnsName
+
+ssh -i /Users/john/Documents/tools/awsdemo/awstest.pem ubuntu@ec2-54-202-254-188.us-west-2.compute.amazonaws.com
+
+
+brew install nginx
+sudo nginx -s stop
+sudo nginx 
+cd /usr/local/etc/nginx
+
+sudo nginx -s stop && sudo nginx
+
+check browser: http://localhost:7070/
+
+change default port :
+
+ vim /usr/local/etc/nginx/nginx.conf
+
+
+Take home:
+
+
+Docroot is: /usr/local/var/www
+
+The default port has been set in /usr/local/etc/nginx/nginx.conf to 8080 so that
+nginx can run without sudo.
+
+nginx will load all files in /usr/local/etc/nginx/servers/.
+
+To have launchd start nginx now and restart at login:
+  brew services start nginx
+Or, if you don't want/need a background service you can just run:
+  nginx
+==> Summary
+🍺  /usr/local/Cellar/nginx/1.10.2_1: 8 files, 979.8K
+johns-MacBook-Pro:~ john$ sudo nginx
+
+
+port: 7070
+
+
+
+Install Java, nginx and Postgres. Use SpringBoot as the Appserver 
+Configure nginx and SpringBoot so that SpringBoot runs behind nginx and accesses the Postgres database. 
+Implement a Web page to accept Contacts - Name, Email and Profession and store it in the DB using Tomcat servlet. Profession is a dropdown list of values. If profession is ‘Student’ dynamically show the field ‘School’. If the profession is ‘Doctor’, dynamically show the field ‘Hospital’ 
+Implement the above using Spring or an equivalent Framework 
+SSL enable the website by enabling SSL and installing a cert 
+Create a GitHub account, commit code to Git and send us the links along with the URL to see the working application.
+
+2. Design a set of REST APIs which will do the following using SpringBoot:
+
+List the contacts 
+Add a contact 
+Update a contact 
+Delete a contact
+
+Use the REST APIs to implement the UI
+---------------
