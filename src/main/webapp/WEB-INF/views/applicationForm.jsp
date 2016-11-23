@@ -9,7 +9,7 @@
     </head>
     <body>
         <h1>Application Form</h1>
-        <form:form name="appFrm" commandName="user" action="${pageContext.servletContext.contextPath}/createcontact" method="post">
+        <form:form name="appFrm" commandName="contact" action="${pageContext.servletContext.contextPath}/createcontact" method="post">
             <table>
                 <tr>
                     <td>Name:</td>
